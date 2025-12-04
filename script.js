@@ -89,12 +89,12 @@ var clicked = true;
 document.addEventListener('click', function () {
 
     if (clicked)
-    if (window.scrollY > 0.60 * document.body.scrollHeight) {
-        // L'URL que vous voulez ouvrir
-        const urlCible = "./popup/popup.html";
+        if (window.scrollY > 0.60 * document.body.scrollHeight) {
+            // L'URL que vous voulez ouvrir
+            const urlCible = "./popup/popup.html";
 
-        // Ouvre l'URL dans un nouvel onglet ('_blank')
-        window.open(urlCible, '_blank');
-        clicked=false;
-    }
+            // Ouvre l'URL dans un nouvel onglet ('_blank')
+            window.open(urlCible, '_blank');
+            clicked = false;
+        }
 });
