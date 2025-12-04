@@ -1,9 +1,8 @@
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 import { db } from "./firebase-config.js";
-import { collection, addDoc } from "firebase/firestore";
 
 async function ajouterUtilisateur(nom, age) {
     try {
-        // On ajoute un document dans la collection "users"
         const docRef = await addDoc(collection(db, "users"), {
             nom: nom,
             age: age,
@@ -14,5 +13,5 @@ async function ajouterUtilisateur(nom, age) {
         console.error("Erreur lors de l'ajout : ", e);
     }
 }
-
-ajouterUtilisateur("Alice", 25);
+// exemple pour ajouter une utilisateur
+// ajouterUtilisateur("Alice", 25);

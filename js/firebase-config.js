@@ -1,12 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBqkXBAUbN1N07nNzIQ_sj00UFAjYnDZ64",
     authDomain: "nuit-de-info-sah.firebaseapp.com",
@@ -17,12 +12,14 @@ const firebaseConfig = {
     measurementId: "G-66R9ZERY3K"
 };
 
-// Initialisation de l'application
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// On initialise la DB et on l'EXPORTE pour l'utiliser ailleurs
+// Initialisation
+export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+export const auth = getAuth(app);
 
-// On peut aussi exporter l'app si besoin plus tard
-export default app;
+// Connexion anonyme automatique (obligatoire pour écrire)
+signInAnonymously(auth).then(() => {
+    console.log("Connecté anonymement");
+}).catch((error) => {
+    console.error("Erreur de connexion", error);
+});
