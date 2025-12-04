@@ -141,6 +141,8 @@ img {
     font-weight: 500;
 }
 
+<<<<<<< HEAD
+
 /* --- gradient --- */
 .section-gradient {
     /* Le dégradé : Du Blanc (0%) vers le Bleu Pétrole (100%) */
@@ -157,6 +159,8 @@ img {
     text-align: center;
 }
 
+
+=======>>>>>>>e72087a (index pixel)
 
 /* --- FOOTER --- */
 footer {
@@ -195,6 +199,8 @@ footer {
     .grid-layout.reverse .image-block {
         order: 1;
     }
+
+    <<<<<<< HEAD
 }
 
 /* Style de la boîte */
@@ -275,4 +281,5 @@ footer {
     left: 30px;
     border-right: 5px solid #6366f1;
     /* Bleu (Indigo) pour changer */
+    =======>>>>>>>e72087a (index pixel)
 }
